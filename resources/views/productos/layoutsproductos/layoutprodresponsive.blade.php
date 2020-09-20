@@ -1,6 +1,4 @@
-
-
-  <div class="col-sm-12 row align-center justify-content-between">
+ <div class="col-sm-12 row align-center justify-content-between">
             @forelse ($productos as $producto)
 <div class="col-sm-6 col-md-6 showhim letsprub row" id="ps{{$producto->id}}" style="display:">
                 <div class="card card-ecommerce shadow mb-5">
@@ -32,3 +30,5 @@
         <ul> No hay productos agregados</ul>
         @endforelse
         </div>
+
+

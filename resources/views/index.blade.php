@@ -6,18 +6,39 @@
 
 @include('layouts.carouselIndex')
 
-<div class="col-md-12 mt-4">
-	<div class="col-md-5 rounderCorner py-4">
-		<a class="float-righ text-right">Producto Destacado</a>
-	</div>
-</div>
+@include('layouts.index.destacadoslayout')
 
+@include('layouts.index.promo1layout')
 
-<div class="col-md-12 mt-4">
-	<div class="col-md-5 rounderCorner py-4">
+@include('layouts.index.masvistoslayouts')
 
-	</div>
-</div>
+@include('layouts.index.newsletterlayout')
+
+@include('layouts.index.locales')
+
+@include('layouts.index.promo2layout')
+
 
 @endsection
 
+@section('script')
+	 <script>
+  $('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:false,
+    mouseDrag:true,
+   responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+  </script>
+@endsection

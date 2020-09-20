@@ -67,8 +67,20 @@ class ProductoController extends Controller
         $producto->diagnostico = $request->diagnostico;
         $producto->descripcion = $request->descripcion;
         $producto->precio = $request->precio;
-        $producto->imagen1 = $request->file('imagen1')->store('public/imagenes/productos');
-        $producto->imagen2 = $request->file('imagen2')->store('public/imagenes/productos');
+        if($request->hasFile('imagen1')){
+            $producto->imagen1 = $request->file('imagen1')->store('public/imagenes/productos');
+        }
+        else{
+            $producto->imagen1 = "public/default-img.png";
+        }
+
+        if($request->hasFile('imagen2')){
+            $producto->imagen2 = $request->file('imagen2')->store('public/imagenes/productos');
+        }
+        else{
+            $producto->imagen2 = "public/default-img.png";
+        }
+
 
         $producto->save();
 
@@ -119,6 +131,22 @@ class ProductoController extends Controller
      */
     public function update(Request $request , Producto $producto)
     {
+
+        if($request->hasFile('imagen2')){
+            $imagen2 = $request->file('imagen2')->store('public/imagenes/productos');
+        }
+        else{
+            $imagen2 = $producto->imagen2;
+        }
+
+        if($request->hasFile('imagen1')){
+            $imagen1 = $request->file('imagen1')->store('public/imagenes/productos');
+        }
+        else{
+            $imagen1 = $producto->imagen1;
+        }
+
+
         $producto->update([
         $producto->tipo_producto_id = $request->tipo_producto_id,
         $producto->nombre = $request->nombre,
@@ -130,9 +158,10 @@ class ProductoController extends Controller
         $producto->diagnostico = $request->diagnostico,
         $producto->descripcion = $request->descripcion,
         $producto->precio = $request->precio,
-        $producto->imagen1 = $request->file('imagen1')->store('public'),
-        $producto->imagen2 = $request->file('imagen2')->store('public'),
+        $producto->imagen1 = $imagen1,
+        $producto->imagen2 = $imagen2,
         ]);
+
 
         return redirect()->route('producto.show' , $producto->id);
     }

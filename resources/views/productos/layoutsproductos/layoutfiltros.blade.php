@@ -1,6 +1,6 @@
 <div class="col-md-3" id="menu1" style="display:none;">
             <aside>
-                <h3 class="text-center">Filtros</h3>
+                <h3 class="text-center mt-4">Filtros</h3>
 
                 <div class="card h-100">
                     <article class="card-group-item">

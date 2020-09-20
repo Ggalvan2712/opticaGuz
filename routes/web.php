@@ -21,16 +21,16 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 // ABM MARCA //
 
-Route::get('marca' , 'MarcaController@index')->name('marca.index');
-Route::post('admin/marca' , 'MarcaController@store')->name('marca.store');
-Route::get('admin/marca/crear' ,[
+Route::get('marcas' , 'MarcaController@index')->name('marca.index');
+Route::post('admin/marcas' , 'MarcaController@store')->name('marca.store');
+Route::get('admin/marcas/crear' ,[
 'middleware' => 'admin' ,
 'uses' =>'MarcaController@create',
 ])->name('marca.crear');
 
 // ABM ESTILO //
 
-Route::get('admin/estilo' ,[
+Route::get('admin/estilos' ,[
 	'middleware' => 'admin' ,
 	'uses' => 'EstilosController@index'
 ])->name('estilos.index');
@@ -42,6 +42,13 @@ Route::get('admin/estilo/crear' ,[
 	'uses' => 'EstilosController@create'
 ])->name('estilos.crear');
 
+Route::get('admin/estilos/{estilo}/editar' ,[
+		'middleware' => 'admin',
+		'uses' => 'EstilosController@edit'
+	] )->name('estilos.edit');
+
+Route::patch('admin/estilos/{estilo}' , 'EstilosController@update')->name('estilos.update');
+
 // ABM TIPO DE PRODUCTOS //
 Route::get('admin/tipoproducto' , 'TipoProductosController@index')->name('tipoProducto.index');
 
@@ -51,6 +58,8 @@ Route::get('admin/tipoproducto/crear' , [
     'middleware' => 'admin',
     'uses' => 'TipoProductosController@create'
 ])->name('tipoproducto.crear');
+
+
 
 // MUESTRA LOS PRODUCTOS TRAIDOS DE LA DB
 Route::get('productos' , 'ProductoController@index')->name('productos.index');

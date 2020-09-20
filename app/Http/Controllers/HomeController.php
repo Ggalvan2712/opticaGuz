@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Marca;
+use App\Producto;
+use DB;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+         $productos = Producto::latest()->get();
+
+          //
+
+        return view('index' , compact('productos'));
     }
 }

@@ -3,7 +3,7 @@
  @section('content')
 
 @forelse($marca as $marcasItem)
- <li>{{$marcasItem->name}}</li>
+<li>{{$marcasItem->name}}</li>
 @empty
 <li>No hay marcas agregadas</li>
 @endforelse

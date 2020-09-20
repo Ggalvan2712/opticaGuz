@@ -71,7 +71,7 @@
 							<label for="uso" class="col-md-4 col-form-label text-md-right">{{ __('Uso') }}</label>
 
 							<div class="col-md-6">
-                                <input id="uso" type="text" class="form-control @error('uso') is-invalid @enderror" name="uso" value="{{$producto->uso}}" required autocomplete="uso" autofocus>
+                                <input id="uso" type="text" class="form-control @error('uso') is-invalid @enderror" name="uso" value="{{$producto->uso}}"  autocomplete="uso" autofocus>
 
                                 @error('uso')
                                     <span class="invalid-feedback" role="alert">
@@ -86,7 +86,7 @@
 							<label for="tipo" class="col-md-4 col-form-label text-md-right">{{ __('Tipo') }}</label>
 
 							<div class="col-md-6">
-                                <input id="tipo" type="text" class="form-control @error('tipo') is-invalid @enderror" name="tipo" value="{{$producto->tipo}}" required autocomplete="tipo" autofocus>
+                                <input id="tipo" type="text" class="form-control @error('tipo') is-invalid @enderror" name="tipo" value="{{$producto->tipo}}"  autocomplete="tipo" autofocus>
 
                                 @error('tipo')
                                     <span class="invalid-feedback" role="alert">
@@ -101,7 +101,7 @@
 							<label for="diagnostico" class="col-md-4 col-form-label text-md-right">{{ __('Diagnostico') }}</label>
 
 							<div class="col-md-6">
-                                <input id="diagnostico" type="text" class="form-control @error('diagnostico') is-invalid @enderror" name="diagnostico" value="{{$producto->diagnostico}}" required autocomplete="diagnostico" autofocus>
+                                <input id="diagnostico" type="text" class="form-control @error('diagnostico') is-invalid @enderror" name="diagnostico" value="{{$producto->diagnostico}}" autocomplete="diagnostico" autofocus>
 
                                 @error('diagnostico')
                                     <span class="invalid-feedback" role="alert">
@@ -116,7 +116,9 @@
 							<label for="descripcion" class="col-md-4 col-form-label text-md-right">{{ __('Descripcion') }}</label>
 
 							<div class="col-md-6">
-                                <input id="descripcion" type="text" class="form-control @error('descripcion') is-invalid @enderror" name="descripcion" value="{{$producto->descripcion}}" required autocomplete="descripcion" autofocus>
+                                <textarea id="descripcion" id="textArea" class="form-control @error('descripcion') is-invalid @enderror" row="10" cols="10" name="descripcion" required autocomplete="descripcion" autofocus>
+                                    {{$producto->descripcion}}
+                                </textarea>
 
                                 @error('descripcion')
                                     <span class="invalid-feedback" role="alert">

@@ -113,7 +113,9 @@
 							<label for="descripcion" class="col-md-4 col-form-label text-md-right">{{ __('Descripcion') }}</label>
 
 							<div class="col-md-6">
-                                <input id="descripcion" type="text" class="form-control @error('descripcion') is-invalid @enderror" name="descripcion" value="{{ old('descripcion') }}" required autocomplete="descripcion" autofocus>
+                                <textarea id="descripcion" type="text" class="form-control @error('descripcion') is-invalid @enderror" name="descripcion" required autocomplete="descripcion" autofocus>
+
+                                </textarea>
 
                                 @error('descripcion')
                                     <span class="invalid-feedback" role="alert">
@@ -140,8 +142,8 @@
 
 							<div class="col-md-6">
                                 <input id="imagen2" type="file" class="form-control-file" name="imagen2">
+                            </div>
 
-                             <div>
 						</div>
 						<br>
 						 <div class="form-group row mb-0">

@@ -10,10 +10,10 @@ class EstilosController extends Controller
 {
     public function index()
     {
-       $estilo = Estilos::latest()->get();
+       $estilo = Estilos::first()->get();
 
        //dd($estilo);
-       return view('admin/estilo' , compact('estilo'));
+       return view('admin/estilos' , compact('estilo'));
     }
 
     public function store(){
@@ -21,7 +21,7 @@ class EstilosController extends Controller
         'name' => request('name'),
        ]);
 
-       return redirect('admin/estilo');
+       return redirect('admin/estilos');
      }
 
     public function create()
@@ -30,6 +30,20 @@ class EstilosController extends Controller
         return view ('admin/estiloCreate');
     }
 
+  public function edit(Estilos $estilo){
+
+      return view('admin/estiloEdit' , [
+            'estilo' => $estilo
+        ]);
+  }
+
+  public function update(Request $request , Estilos $estilo){
+    $estilo->update([
+        $estilo->name = $request->name,
+    ]);
+
+    return redirect('admin/estilos');
+  }
 
 
     /**

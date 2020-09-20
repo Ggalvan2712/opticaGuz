@@ -14,6 +14,7 @@ async function detectDisplay(){
     }
 
 
+
     async  function changeMenu(displayWidt) {
 
     largoarray = document.querySelectorAll(".letsprubs").length;
@@ -50,3 +51,7 @@ async function detectDisplay(){
             document.getElementById("filterCard1").style.display = "none";
         }
     }
+
+
+var editor = new Editor();
+editor.render();

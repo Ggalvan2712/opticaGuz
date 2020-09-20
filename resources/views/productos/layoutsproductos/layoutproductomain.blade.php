@@ -1,7 +1,7 @@
 <div class="col-md-9 row">
             <div class="col-md-12" id="filterCard" style="display:none;">
 
-                <h3 href="{{route('productos.index')}}">Productos</h3>
+                <h3 class ="mt-4">Productos</h3>
                 <br>
                     <div class="card shadow mb-5 bg-softgrey row" style="height:40%;">
 
@@ -56,7 +56,7 @@
                 <div class="card card-ecommerce shadow mb-5">
                     <div class="imProd">
                         <a href="{{route('producto.show' , $producto->id)}}">
-                            <img  class="card-img-top img-fluid btnHover" src="{{Storage::url($producto->imagen1)}}" alt="PRODUCTO" style="heith:100%">
+                            <img  class="card-img-top img-fluid btnHover" src="{{Storage::url($producto->imagen1)}}" alt="PRODUCTO">
                             <br>
                         </a>
                     </div>

@@ -11,18 +11,27 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset ('js/jquery.js')}}" defer></script>
+    <script src="{{ asset ('js/jquery.js')}}"></script>
+    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
     <script src="{{ asset('js/funciones.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+<link rel="stylesheet" href="http://lab.lepture.com/editor/editor.css" />
+<script type="text/javascript" src="http://lab.lepture.com/editor/editor.js"></script>
+<script type="text/javascript" src="http://lab.lepture.com/editor/marked.js"></script>
+
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/owl.theme.default.css')}}" rel="stylesheet">
 </head>
 <body onresize="detectDisplay();" onload="detectDisplay();">
   @if(auth()->user())
@@ -42,6 +51,8 @@
 </body>
 
 <footer>
+    @include('layouts.index.footer')
+    @yield('script')
 
 </footer>
 

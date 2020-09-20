@@ -10945,6 +10945,17 @@ a.text-dark:focus {
   background-color: #8cbc44;
 }
 
+.sep-optic-green{
+  height:4.25rem;
+}
+
+.greenbanersep{
+  color:white;
+  border: 1px solid;
+  border-radius:6px;
+  text-decoration:bold;
+}
+
  .showme{
    display: none;
  }
@@ -11011,8 +11022,16 @@ a:active {
   font-weight:bold;
 }
 
-.rounderCorner{
-  background-color: grey;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+.separadorIndex{
+  border-bottom:0.055rem solid;
+}
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.align-tittle{
+   display: inline-flex;
+  align-items: center;
 }

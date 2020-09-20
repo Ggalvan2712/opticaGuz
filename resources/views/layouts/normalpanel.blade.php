@@ -65,7 +65,7 @@
          </nav>
 
 
-          <nav class="navbar navbar-expand-sm navbar-light bg-opticgreen">
+          <nav class="navbar navbar-expand-sm navbar-light bg-opticgreen mb-4">
             <div class="container d-none d-lg-inline-flex">
                         <div class="col-xl-2 col-lg-2">
                             <a class="navbar-brand float-left"  href="{{ url('/') }}">

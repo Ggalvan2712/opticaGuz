@@ -12,15 +12,16 @@ class MarcaController extends Controller
     {
        $marca = Marca::latest()->get();
 
-       return view('marcas/marca' , compact('marca'));
+       return view('marcas/marcas' , compact('marca'));
     }
 
     public function store(){
        Marca::create([
         'name' => request('name'),
+        'logo' -> request('logo'),
        ]);
 
-       return  redirect('admin/marca');
+       return  redirect('marcas');
      }
 
     public function create()

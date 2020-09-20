@@ -5,7 +5,15 @@
     		<select id="id" name="estilo_id" class="form-control" required>
        				<option></option>
        			@foreach( $estilos as $key => $value )
-   					<option value="{{ $key }}">{{ $value }}</option>
+   					@if(isset($producto))
+       			 		@if($producto->estilo_id == $key)
+       						<option value="{{ $key }}" selected>{{ $value }}</option>
+       					@else
+   							<option value="{{ $key }}">{{ $value }}</option>
+       					@endif
+                     @else
+                <option value="{{ $key }}">{{ $value }}</option>
+       				@endif
 				@endforeach
 			</select>
 		</div>
