@@ -28,6 +28,24 @@ Route::get('admin/marcas/crear' ,[
 'uses' =>'MarcaController@create',
 ])->name('marca.crear');
 
+//BANNERS //
+
+Route::get('admin/banners' ,[
+	'middleware' => 'admin' ,
+	'uses' => 'PromoController@index'
+])->name('promos.index');
+
+Route::patch('admin/banners/{banner}' , 'PromoController@update')->name('promos.update');
+
+//HERO BANNER//
+
+Route::get('admin/herobanner' ,[
+	'middleware' => 'admin' ,
+	'uses' => 'HeroController@index'
+])->name('hero.index');
+
+Route::post('admin/herobanner' , 'HeroController@store')->name('hero.store');
+
 // ABM ESTILO //
 
 Route::get('admin/estilos' ,[

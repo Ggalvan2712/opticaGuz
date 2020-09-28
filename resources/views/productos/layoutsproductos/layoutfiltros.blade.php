@@ -48,19 +48,19 @@
             </aside>
         </div>
 
-<div class="col-sm-12 bg-softgrey" id="menu2" style="display:none;">
+<div class="col-sm-12 bg-softgrey mt-4" id="menu2" style="display:none;">
 
 <div class="col-sm-12 d-flex row justify-content-between">
 
     <div class="row pl-3">
-    <img class="mt-auto mb-auto" style="height:15px;" src="{{Storage::url('public/equalizer.svg')}}">
-    <h5 class="glyphicon glyphicon-list-alt pl-1 mt-auto mb-auto" data-toggle="modal" data-target="#filtrosModal" style="color: #048704;">Filtros</h5>
+    <img class="mt-auto mb-auto text-center" style="height:15px;" src="{{Storage::url('public/equalizer.svg')}}">
+    <h5 class="glyphicon glyphicon-list-alt pl-1 mt-auto mb-auto text-center" data-toggle="modal" data-target="#filtrosModal" style="color: #048704;">Filtros</h5>
 </div>
 
 
 
 
-    <h5 class="mt-auto mb-auto">Ordenar por</h5>
+    <h5 class="mt-auto mb-auto mt-2 text-center">Ordenar por</h5>
 
 </div>
 

@@ -1,4 +1,4 @@
- <nav class="navbar navbar-expand-sm navbar-light bg-opticgreen mt-auto">
+ <nav class="navbar navbar-expand-sm navbar-light bg-opticgreen mt-auto fixd-bottom">
             <div class="container d-none d-lg-inline-flex">
                         <div class="col-xl-2 col-lg-2">
                             <a class="navbar-brand float-left"  href="{{ url('/') }}">

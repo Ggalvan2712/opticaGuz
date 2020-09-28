@@ -1,6 +1,6 @@
 
-<div>
-        <nav class="navbar navbar-expand-sm navbar-light bg-white shadow-sm" id="navbar1" style="display:;">
+<div class="">
+        <nav class="navbar navbar-expand-sm navbar-light bg-white shadow-sm d-none d-lg-flex" id="navbar1" style="display:;">
             <div class="container d-none d-lg-inline-flex">
                         <div class="col-xl-2 col-lg-2">
                             <a class="navbar-brand float-left"  href="{{ url('/') }}">
@@ -13,10 +13,11 @@
                         </div>
 
                         <!-- INICIO DATOS -->
-                        <div class="col-xl-2 col-lg3">
+                        <div class="">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="fa fa-whatsapp nav-link float-left" style="font-size:100%; color:#8cbc44; font-weight:bold;"><span class="mr-auto ml-auto">  +54 9 381 430-1312 </span> </a>
+                                    <a class="fa fa-whatsapp nav-link float-left" style="font-size:120%; color:#4d7737; font-weight:bold;"><span class="mr-auto ml-auto"
+                                        style="font-family:Helvetica;">  54 9 381 430-1312 </span> </a>
                                 </li>
                             </ul>
                         </div>
@@ -24,10 +25,11 @@
                         <div class="col-xl-1 col-lg-1">
                         </div>
 
-                        <div class="col-xl-2 col-lg3 ">
+                        <div class="">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="fa fa-facebook-official nav-link float-left" style="font-size:100%; color:#8cbc44; font-weight:bold" href="https://www.facebook.com/OpticaGuzmanTuc"><span class="mr-auto ml-auto">  OpticaGuzmanTuc </span></a>
+                                    <a class="fa fa-facebook-official nav-link float-left inline-flex" style="font-size:120%; color:#4d7737; font-weight:bold" href="https://www.facebook.com/OpticaGuzmanTuc"><span class="mr-auto ml-auto"
+                                        style="font-family:Helvetica;"> OPTICA GUZMAN </span></a>
                                 </li>
                             </ul>
                         </div>
@@ -65,7 +67,7 @@
          </nav>
 
 
-          <nav class="navbar navbar-expand-sm navbar-light bg-opticgreen mb-4">
+          <nav class="navbar navbar-expand-sm navbar-light bg-opticgreen">
             <div class="container d-none d-lg-inline-flex">
                         <div class="col-xl-2 col-lg-2">
                             <a class="navbar-brand float-left"  href="{{ url('/') }}">

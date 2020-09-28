@@ -15,8 +15,12 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Promociones') }}</a>
+                        <li class="nav-item dropdown">
+                             <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Promocines</a>
+                                <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{{route('promos.index')}}">Banners</a>
+                                <a class="dropdown-item" href="{{route('hero.index')}}">Hero</a>
+                                </div>
                         </li>
 
 
