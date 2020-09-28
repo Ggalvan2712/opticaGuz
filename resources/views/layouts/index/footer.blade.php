@@ -1,4 +1,13 @@
+
 @include('layouts.index.newsletterlayout')
+
+
+<div class="col-md-12 bg-opticgreen d-md-none">
+    <div class="col-md-12 ">
+        <a class="flaticon-045-facebook" style="color:transparent;"> </a>
+    </div>
+</div>
+
 <div class="col-md-12">
     <div class="col-md-12  d-none d-md-block">
         <div class="row justify-content-between">
@@ -52,11 +61,11 @@
         </div>
     </div>
     <div class="col-md-12 row mt-2">
-       <div class="col-md-6 text-center">
+        <div class="col-md-6 text-center">
             <div class="col-md-12">
                 <a style="color:#4d7737; font-weight:bold; font-family:helvetica;"> SEGUINOS EN NUESTRAS REDES: </a>
-                <a class="flaticon-045-facebook" style="color:#4d7737"></a>
-                <a class="flaticon-007-whatsapp" style="color:#4d7737"></a>
+                <a class="flaticon-045-facebook" style="color:#4d7737" href="https://www.facebook.com/OpticaGuzmanTuc"></a>
+                <a class="flaticon-007-whatsapp" style="color:#4d7737" href="http://whatsapp.opticaguzman.com"></a>
                 <a class="flaticon-034-instagram" style="color:#4d7737"></a>
             </div>
        </div>

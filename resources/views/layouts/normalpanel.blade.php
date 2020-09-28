@@ -14,26 +14,15 @@
 
                         <!-- INICIO DATOS -->
                         <div class="">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="fa fa-whatsapp nav-link float-left" style="font-size:120%; color:#4d7737; font-weight:bold;"><span class="mr-auto ml-auto"
-                                        style="font-family:Helvetica;">  54 9 381 430-1312 </span> </a>
-                                </li>
-                            </ul>
+                            <div class="">
+                                <div class="col-md-12">
+                                    <a style="color:#4d7737; font-weight:bold; font-family:helvetica;"> SEGUINOS EN NUESTRAS REDES: </a>
+                                    <a class="flaticon-045-facebook" style="color:#4d7737" href="https://www.facebook.com/OpticaGuzmanTuc"></a>
+                                    <a class="flaticon-007-whatsapp" style="color:#4d7737" href="http://whatsapp.opticaguzman.com"></a>
+                                    <a class="flaticon-034-instagram" style="color:#4d7737"></a>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="col-xl-1 col-lg-1">
-                        </div>
-
-                        <div class="">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="fa fa-facebook-official nav-link float-left inline-flex" style="font-size:120%; color:#4d7737; font-weight:bold" href="https://www.facebook.com/OpticaGuzmanTuc"><span class="mr-auto ml-auto"
-                                        style="font-family:Helvetica;"> OPTICA GUZMAN </span></a>
-                                </li>
-                            </ul>
-                        </div>
-
                  <!-- LOGIN // REGISTER -->
                         <div class="col-xl-4 col-lg-2">
                             <ul class="navbar-nav float-right">

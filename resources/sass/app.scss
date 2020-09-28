@@ -10942,7 +10942,8 @@ a.text-dark:focus {
 }
 
 .bg-opticgreen{
-  background-color: #4d7737;
+background: rgb(77,119,55);
+background: linear-gradient(90deg, rgba(77,119,55,1) 0%, rgba(157,184,125,1) 51%, rgba(113,161,86,0.9247898988697041) 99%);
 }
 
 .sep-optic-green{
@@ -11011,16 +11012,17 @@ a:active {
 
 .Index-menu{
   color:white;
-  font-family: "Times New Roman",
+  font-family: "Helvetica";
+  font-weight:bold;
+  font-size:1rem;
 }
 
 .index-hover:Hover{
-  font-size:1.125rem;
+  font-size:1.5rem;
+
 }
 
-.index-hover:active{
-  font-weight:bold;
-}
+
 
 .separadorIndex{
   border-bottom:0.055rem solid;
@@ -11034,4 +11036,34 @@ a:active {
 .align-tittle{
    display: inline-flex;
   align-items: center;
+}
+
+.divcut{
+  border-top: 40px solid #4d7737;
+  border-right: 16px solid #78a36f;
+}
+.divcut2{
+   border-top: 40px solid #78a36f;
+  border-right: 16px solid #b8d1ac;
+}
+.divcut3{
+   border-top: 40px solid #b8d1ac;
+  border-right: 16px solid transparent;
+}
+
+.bg-gradient{
+  background-color:#b8d1ac;
+}
+
+.footerlist{
+  list-style: none;
+
+}
+
+.footerli{
+  color:rgb(33, 37, 41);
+  display:block;
+  text-align: left;
+  font-weight:bold;
+  font-family:helvetica;
 }
