@@ -31,6 +31,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet">
+     <link href="{{ asset('css/flaticon.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.theme.default.css')}}" rel="stylesheet">
 </head>
 <body onresize="detectDisplay();" onload="detectDisplay();">

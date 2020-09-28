@@ -11037,3 +11037,33 @@ a:active {
    display: inline-flex;
   align-items: center;
 }
+
+.divcut{
+  border-top: 40px solid #4d7737;
+  border-right: 16px solid #78a36f;
+}
+.divcut2{
+   border-top: 40px solid #78a36f;
+  border-right: 16px solid #b8d1ac;
+}
+.divcut3{
+   border-top: 40px solid #b8d1ac;
+  border-right: 16px solid transparent;
+}
+
+.bg-gradient{
+  background-color:#b8d1ac;
+}
+
+.footerlist{
+  list-style: none;
+
+}
+
+.footerli{
+  color:rgb(33, 37, 41);
+  display:block;
+  text-align: left;
+  font-weight:bold;
+  font-family:helvetica;
+}

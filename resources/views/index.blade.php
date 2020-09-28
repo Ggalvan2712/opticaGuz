@@ -12,11 +12,11 @@
 
 @include('layouts.index.masvistoslayouts')
 
-@include('layouts.index.newsletterlayout')
-
 @include('layouts.index.locales')
 
 @include('layouts.index.promo2layout')
+
+
 
 
 @endsection
