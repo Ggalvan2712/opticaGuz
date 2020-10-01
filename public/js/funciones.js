@@ -55,3 +55,5 @@ async function detectDisplay(){
 
 var editor = new Editor();
 editor.render();
+
+

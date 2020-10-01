@@ -5,11 +5,19 @@
 
 @if(Auth::check())
 	@if(auth()->user()->admin)
-		<a href="{{ route('productos.edit', $producto)}}" class="btn btn-primary align-right mt-4 mb-4"> Editar </a>
+		<div class="ml-4">
+			<a href="{{ route('productos.edit', $producto)}}" class="btn btn-primary align-right mt-4 mb-4"> Editar </a>
+		</div>
 	@endif
 @endif
 
-@include('productos.layoutsproductos.productosNoresp')
+@if($producto->diagnostico == "Hipermetropia")
+ @include('productos.layoutsproductos.hipermetropia')
+
+@else
+	@include('productos.layoutsproductos.productosNoresp')
+
+@endif
 
 
 

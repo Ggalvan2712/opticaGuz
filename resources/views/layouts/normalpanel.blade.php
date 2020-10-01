@@ -3,13 +3,14 @@
         <nav class="navbar navbar-expand-sm navbar-light bg-white shadow-sm d-none d-lg-flex" id="navbar1" style="display:;">
             <div class="container d-none d-lg-inline-flex">
                         <div class="col-xl-2 col-lg-2">
-                            <a class="navbar-brand float-left"  href="{{ url('/') }}">
-                                <img src="{{Storage::url('public/logo.png')}}" style="widht:200px; height:35px">
-                            </a>
+
                          </div>
                         <!-- FIN LOGO -->
 
                         <div class="col-xl-1 col-lg-1">
+                            <a class="navbar-brand float-left"  href="{{ url('/') }}">
+                                <img src="{{Storage::url('public/logo.png')}}" style="widht:140px; height:55px;">
+                            </a>
                         </div>
 
                         <!-- INICIO DATOS -->
@@ -62,10 +63,12 @@
                             <a class="navbar-brand float-left"  href="{{ url('/') }}">
                                 <img src="{{Storage::url('public/logoblanco.png')}}" style="widht:200px; height:60px">
                             </a>
+
                          </div>
                         <!-- FIN LOGO -->
 
                         <div class="col-xl-1 col-lg-1">
+
                         </div>
 
 
