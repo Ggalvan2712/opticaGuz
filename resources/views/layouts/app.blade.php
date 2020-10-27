@@ -53,10 +53,11 @@
 </body>
 
 
-</html>
 
 <footer>
     @include('layouts.index.footer')
     @yield('script')
 
 </footer>
+
+</html>

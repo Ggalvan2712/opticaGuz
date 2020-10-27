@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Marca;
 use App\Producto;
 use DB;
+use Session;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 
@@ -176,4 +177,120 @@ class ProductoController extends Controller
     {
         //
     }
+
+    public function cart(){
+
+       // dd(session()->get('cart'));
+
+        return view('carrito/carrito');
+    }
+
+    public function addToCart($id , Request $request){
+
+        $product = Producto::find($id);
+        $cart = session()->get('cart');
+        $esfericoIzq = 1;
+        $esfericoDer = 1;
+        $cantidad = 1;
+
+        //dd($request->esfericoIzq);
+
+
+            $cantidad = $request->cantidad;
+
+
+        if(isset($request->esfericoIzq)){
+           if($esfericoDer == $esfericoIzq){
+
+                    $esfericoDer = $esfericoIzq;
+                    $cantidad = $cantidad;
+                }
+                else{
+
+                   $esfericoDer = $request->esfericoIzq;
+                   $cantidad = 2;
+                }
+
+        }
+
+        dd($cantidad);
+            // si el carrito esta vacio entonces es el primer producto //
+
+        if(!$cart) {
+            $cart = [
+                $id => [
+                    "id" => $product->id,
+                    "nombre" => $product->nombre,
+                    "cantidad" => $cantidad,
+                    "precio" => $product->precio,
+                    "foto" => $product->imagen1,
+                    "esfericoIzq" => $esfericoIzq,
+                    "esfericoDer" => $esfericoDer
+                ]
+            ];
+
+            session()->put('cart' , $cart);
+
+
+             return view('carrito/carrito');
+        }
+
+        // SI EL CARRITO ESTA VACIO VERIFICAR SI EXISTE EL PRODUCTO Y AUMENTAR LA CANTIDAD //
+
+        if(isset($cart[$id])){
+            $cart[$id]['cantidad']++;
+
+            session()->put('cart' , $cart);
+
+
+
+             return view('carrito/carrito');
+        }
+
+        // SI EL ITEM NO EXISTE ENTONCES AGREGARLO AL CARRITO CON CANTIDAD = 1 //
+
+        $cart[$id] = [
+            "id" => $product->id,
+            "nombre" => $product->nombre,
+            "cantidad" => 1,
+            "precio" => $product->precio,
+            "foto" => $product->imagen1
+        ];
+
+        session()->put('cart' , $cart);
+
+
+         return view('carrito/carrito');
+
+}
+
+public function deleteItemCart($indice){
+
+
+    $cart = session()->get('cart');
+
+    foreach($cart as $index => $product){
+        if($product["id"] == $indice){
+            unset($cart[$index]);
+        }
+    }
+    session(['cart' => $cart]);
+
+    return view('carrito/carrito');
+}
+
+public function updateCart($id , Request $request){
+
+    $cart = session()->get('cart');
+
+     if(isset($cart[$id])){
+
+        $cart[$id]['cantidad'] = $request->cantidad;
+
+            session()->put('cart' , $cart);
+
+
+             return view('carrito/carrito');
+        }
+}
 }

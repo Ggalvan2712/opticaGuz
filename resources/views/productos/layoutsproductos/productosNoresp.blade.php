@@ -37,7 +37,7 @@
 						</div>
 
 						<div class="col-sm-12 col-md-9">
-							<button class="btn btn-primary col-md-9">Agregar al carrito</a>
+							<a class="btn btn-primary col-md-9" href="{{route('añadirCarrito' , $producto->id)}}">Agregar al carrito</a>
 						</div>
 					</div>
 					<div class="col-md-12 mt-2">

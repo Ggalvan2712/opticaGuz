@@ -1,0 +1,34 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Estilos;
+use DB;
+
+class EstilosController extends Controller
+{
+    public function CreateCheckoutSession()
+    {
+      return route();
+    }
+
+
+
+
+
+
+
+
+
+
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor()
+    {
+        throw new \Exception('Method getFacadeAccessor() is not implemented.');
+    }
+}

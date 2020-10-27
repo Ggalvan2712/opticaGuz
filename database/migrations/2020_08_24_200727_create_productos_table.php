@@ -19,7 +19,7 @@ class CreateProductosTable extends Migration
             $table->string('nombre');
             $table->string('genero')->nullable();
             $table->unsignedBigInteger('marca_id');
-            $table->unsignedBigInteger('estilo_id');
+            $table->unsignedBigInteger('estilo_id')->nullable();
             $table->string('uso')->nullable();
             $table->string('tipo')->nullable();
             $table->string('diagnostico')->nullable();
@@ -35,6 +35,9 @@ class CreateProductosTable extends Migration
             $table->foreign('estilo_id')->references('id')->on('estilos');
         });
     }
+
+
+
 
     /**
      * Reverse the migrations.

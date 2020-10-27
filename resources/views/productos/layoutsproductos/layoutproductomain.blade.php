@@ -72,7 +72,7 @@
 
 
                        <div  class=" mt-auto showme col-md-12">
-                        <a href="#" class="btn btn-primary col-md-12">Añadir al Carrito</a>
+                        <a class="btn btn-primary col-md-12" href="{{route('añadirCarrito' , $producto->id)}}">Añadir al Carrito</a>
                     </div>
                 </div>
             </div>

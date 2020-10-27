@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
+
 Route::view('admin' , 'admin')->name('adminPanel');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
@@ -45,6 +47,8 @@ Route::get('admin/herobanner' ,[
 ])->name('hero.index');
 
 Route::post('admin/herobanner' , 'HeroController@store')->name('hero.store');
+
+
 
 // ABM ESTILO //
 
@@ -105,6 +109,21 @@ Route::get('productos/{id}' , 'ProductoController@show')->name('producto.show');
 // CREA Y ALMACENA EL PRODUCTO EN LA DB
 Route::post('admin/productos' , 'ProductoController@store')->name('productos.store');
 
+// CARRITO
+
+Route::get('carrito' , 'ProductoController@cart');
+
+Route::get('add-to-cart/{id}' , 'ProductoController@addToCart')->name('añadirCarrito');
+
+Route::get('delete-item/{id}' , 'ProductoController@deleteItemCart')->name('eliminarCarrito');
+
+Route::post('actualizar-carrito/{id}' , 'ProductoController@updateCart')->name('actualizarCarrito');
+
+
+// CHECKOUT //
+
+Route::get('pagar-carrito' , 'CheckoutController@index')->name('pagos');
+Route::post('actualizar-info' , 'CheckoutController@createCheckoutSession')->name('checkoutSession');
 
 
 

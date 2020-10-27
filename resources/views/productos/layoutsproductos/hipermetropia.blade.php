@@ -39,7 +39,7 @@
                   <a> Lente Izquierdo: </a>
                   <form>
                     <div class="form-group mt-2">
-                      <select class="form-control text-center" required>
+                      <select class="form-control text-center" required name="esfericoIzq">
                         <option value="" disabled selected hidden>Izquierdo</option>
                         <option value="1">1</option>
                         <option value="2" >2</option>
@@ -59,7 +59,7 @@
                   <a> Lente Derecho: </a>
                   <form>
                     <div class="form-group mt-2">
-                      <select class="form-control text-center" required>
+                      <select class="form-control text-center" name="esfericoDer">
                         <option value="" disabled selected hidden>Derecho</option>
                         <option value="1">1</option>
                         <option value="2" >2</option>
@@ -81,7 +81,7 @@
           <div class="col-md-12 mt-4 d-md-flex">
 
               <div class="col-sm-12 col-md-3 align-left select-wrap">
-                  <select class="form-control text-center" required>
+                  <select class="form-control text-center" required name="cantidad">
                     <option value="" disabled selected hidden>Cantidad</option>
                     <option value="1">1</option>
                     <option value="2" >2</option>
@@ -97,7 +97,7 @@
               </div>
 
             <div class="col-sm-12 col-md-9">
-              <button class="btn btn-primary col-md-12">Agregar al carrito</a>
+              <a class="btn btn-primary col-md-12" href="{{route('añadirCarrito' , $producto->id)}}">Agregar al carrito</a>
             </div>
 
         </div>
